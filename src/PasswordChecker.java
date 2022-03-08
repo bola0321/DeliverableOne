@@ -14,17 +14,21 @@ public class PasswordChecker {
 		System.out.println("- an exclamation point (!)" + "\n");
 		System.out.print(" Please enter your password here: ");
 		String password = scan.next();
-		System.out.println(" ");
+		System.out.println("");
 
 		// check length of String
 		if (password.length() < 7 || password.length() > 12) {
 			System.out.println("ERROR");
+			scan.close();
 			return;
+			
 		}
 		// check for '!'
 		if (password.indexOf('!') == -1) {
 			System.out.println("ERROR");
+			scan.close();
 			return;
+			
 		}
 		// check password for uppercase and lowercase
 		boolean foundUp = false;
@@ -47,6 +51,8 @@ public class PasswordChecker {
 		} else {
 			System.out.println("ERROR");
 		}
+		
+		scan.close();
 
 	}
 }
