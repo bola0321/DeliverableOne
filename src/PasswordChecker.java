@@ -18,14 +18,14 @@ public class PasswordChecker {
 
 		// check length of String
 		if (password.length() < 7 || password.length() > 12) {
-			System.out.println("ERROR");
+			System.out.println("Error");
 			scan.close();
 			return;
 			
 		}
 		// check for '!'
 		if (password.indexOf('!') == -1) {
-			System.out.println("ERROR");
+			System.out.println("Error");
 			scan.close();
 			return;
 			
@@ -46,10 +46,10 @@ public class PasswordChecker {
 		}
 
 		if (foundUp && foundLow == true) {
-			System.out.println("Password valid and accepted!");
+			System.out.println("Password valid and accepted");
 
 		} else {
-			System.out.println("ERROR");
+			System.out.println("Error");
 		}
 		
 		scan.close();
